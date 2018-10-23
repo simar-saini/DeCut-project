@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href={% static "signup.css"%}>
+</head>
+<body>
+<div class="navigation1" style="background-color:black;">
+ <a href="#">Home</a>
+ <a href="#">About</a>
+ </div>
+<center>
+<div id="id01" class="modal">
+  
+  <form class="modal-content" method="post">
+
+    <div class="container">
+      <p class="firstext"style="color: white;" >Welcome to Signup page</p>
+         {% csrf_token %}
+     <div>
+          <label  for="username"><b class="remember1"style="color : white;" >Username</b></label><br>
+          <input  type="text" placeholder="Enter Username" name="username" id="username" required value={{ username }}><br>
+     </div>
+      <div>
+          <label  for="email"><b class="remember1"style="color : white;" >Email</b></label><br>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required value={{ email }}><br>
+      </div>
+      <div>
+            <label  for="password"><b class="remember1" style="color : white;" >Password</b></label><br>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required value={{ password }}><br>
+
+      </div>
+        <div class="col-25">
+         <div>
+              <label  for="Details"><b class="remember1 " style="color : white;" >Details</b></label><br>
+              <textarea id="details" name="details" placeholder="Enter details" style="height:80px;font-family: Arial, Helvetica, sans-serif;font-size:12.5" required value={{ details }}></textarea>
+         </div>
+         </div>
+        <br>
+        <label for="checka" style="color : white;" >
+            <input type="radio" name="check" id="checka"style="color:white;" checked >E-commerce
+</label>
+                <label for="checka"style="color : white;">
+            <input type="radio" name="check" id="checka">Delievery</label>
+
+	  <div class="clearfix">
+          <br>
+	  <button type="submit" class="signupbtn button">Sign Up</button>
+      
+     
+      </div>
+    </div>
+  </form>
+</div>
+</center>
+</body>
+</html>
