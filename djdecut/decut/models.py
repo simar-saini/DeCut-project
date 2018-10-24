@@ -7,7 +7,7 @@ class signup_model(models.Model):
     email=models.EmailField(primary_key=True)
     password=models.CharField(max_length=255)
     details=models.TextField()
-    chech1=models.BooleanField(blank=True, default=False)
+    chech1=models.BooleanField(default=True)
     created_on=models.DateTimeField(auto_now_add=True)
     updated_on=models.DateTimeField(auto_now=True)
 

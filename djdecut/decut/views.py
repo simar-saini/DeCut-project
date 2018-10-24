@@ -61,8 +61,9 @@ def signup_view(request):
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
             details=form.cleaned_data['details']
+            check1=form.cleaned_data['check1']
             # saving data to DB
-            user = signup_model(details=details ,password=make_password(password), email=email, username=username)
+            user = signup_model(details=details ,password=make_password(password), email=email, username=username,check1=check1)
             user.save()
             print("user save")
     elif request.method == "GET":
