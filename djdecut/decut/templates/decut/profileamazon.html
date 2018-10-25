@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href={% static "profileamazon.css" %}>
+
+</head>
+
+
+<header>
+<div class="topnav">
+ <img src="img/logo.png"> 
+</div>
+</header>
+<body>
+<div class="div1">
+
+<div>
+<div>
+<p class="amazon" ><a class="amazon" style=" text-decoration:none;" href="https://www.amazon.com/"> Amazon</a></p>
+<a style="text-decoration:none; font-family:Courier New; color:black; "></a>
+</div><br>
+
+<p id="estimate"> Estimated Date </p><br>
+
+
+<p id="details"> Details</p>
+
+<input type="text" id="datepicker" value="11/12/2018"><br><p class="checktext">Check Availability</p><br>
+<button class="checkbutton">Check</button>
+<div class="content">
+Username	&nbsp;&nbsp;	 :Amazon <br>
+About&nbsp;	:Amazon.com, Inc., doing business as Amazon,is an American electronic commerce and cloud computing company that was founded on July 5, 1994, by Jeff Bezos and is based in Seattle, Washington.
+It is the largest Internet-based retailer in the world by total sales and market capitalization.
+</div>
+</div>
+</div>
+
+
+<div class="footer">
+  <p id="mouse" style="color:white;" onclick="myFunction()">About</a></p>
+</div>
+<div class="model">
+<p class="thought">"The secret to success is to treat all customers as if your world revolves around them."</p>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   
+  <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+ 
+function myFunction() {
+    location.href="file:///C:/Users/simran/Desktop/delivery/delivery/decut/templates/aboutpage.html";
+
+	}
+	</script>
+</html>
